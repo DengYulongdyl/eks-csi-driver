@@ -1,4 +1,4 @@
-package utils
+package pkg
 
 import (
 	"encoding/json"
@@ -183,8 +183,7 @@ func ServerReachable(host, port string, timeout time.Duration) bool {
 
 func SentrySendError(errorInfo error) {
 	// will init by ENVIRONMENT named "SENTRY_DSN"
-	err := sentry.Init(sentry.ClientOptions{
-	})
+	err := sentry.Init(sentry.ClientOptions{})
 
 	if err != nil {
 		log.Fatalf("sentry.Init: %s", err)

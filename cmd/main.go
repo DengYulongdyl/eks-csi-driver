@@ -8,7 +8,6 @@ import (
 	"path"
 
 	"github.com/capitalonline/cds-csi-driver/pkg/common"
-	"github.com/capitalonline/cds-csi-driver/pkg/driver/utils"
 	log "github.com/sirupsen/logrus"
 )
 
