@@ -2,6 +2,8 @@ package disk
 
 import (
 	"context"
+	"fmt"
+	"github.com/capitalonline/eks-csi-driver/pkg/eks"
 	"github.com/container-storage-interface/spec/lib/go/csi"
 	"github.com/kubernetes-csi/drivers/pkg/csi-common"
 	"google.golang.org/grpc/codes"
@@ -49,7 +51,8 @@ func NewControllerServer(d *DiskDriver) *ControllerServer {
 }
 
 func (c *ControllerServer) CreateVolume(ctx context.Context, req *csi.CreateVolumeRequest) (*csi.CreateVolumeResponse, error) {
-
+	resp, err := eks.CreateBlock("", "")
+	fmt.Println(resp, err)
 	return &csi.CreateVolumeResponse{}, nil
 }
 
