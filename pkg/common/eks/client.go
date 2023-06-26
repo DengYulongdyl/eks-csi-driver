@@ -24,7 +24,7 @@ func NewCreateBlockRequest() (request *CreateBlockRequest) {
 		BaseRequest: &cdshttp.BaseRequest{},
 	}
 	request.SetDomain(consts.ApiHost)
-	request.Init().WithApiInfo(consts.ServiceEKS, consts.ApiVersion, consts.ActionDescribeEKSNode)
+	request.Init().WithApiInfo(consts.ServiceEKS, consts.ApiVersion, consts.ActionCreateBlock)
 	return
 }
 
@@ -38,6 +38,29 @@ func (c *Client) CreateBlock(request *CreateBlockRequest) (response *CreateBlock
 		request = NewCreateBlockRequest()
 	}
 	response = NewCreateBlockResponse()
+	err = c.Send(request, response)
+	return
+}
+
+func NewDeleteBlockRequest() (request *DeleteBlockRequest) {
+	request = &DeleteBlockRequest{
+		BaseRequest: &cdshttp.BaseRequest{},
+	}
+	request.SetDomain(consts.ApiHost)
+	request.Init().WithApiInfo(consts.ServiceEKS, consts.ApiVersion, consts.ActionDeleteBlock)
+	return
+}
+
+func NewDeleteBlockResponse() (response *DeleteBlockResponse) {
+	response = &DeleteBlockResponse{BaseResponse: &cdshttp.BaseResponse{}}
+	return
+}
+
+func (c *Client) DeleteBlock(request *DeleteBlockRequest) (response *DeleteBlockResponse, err error) {
+	if request == nil {
+		request = NewDeleteBlockRequest()
+	}
+	response = NewDeleteBlockResponse()
 	err = c.Send(request, response)
 	return
 }

@@ -12,7 +12,8 @@ const (
 )
 
 const (
-	ActionDescribeEKSNode = "CreateBlock"
+	ActionCreateBlock = "CreateBlock"
+	ActionDeleteBlock = "DeleteBlock"
 )
 
 const (
