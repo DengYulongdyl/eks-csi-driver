@@ -1,6 +1,7 @@
 FROM golang:1.17 AS build-env
 COPY . /go/src/github.com/capitalonline/eks-csi-driver
 RUN go env -w GO111MODULE=on && go env -w GOPROXY=https://goproxy.cn,direct
+RUN go mod tidy
 
 RUN cd /go/src/github.com/capitalonline/eks-csi-driver && CGO_ENABLED=0 GOARCH="amd64" GOOS="linux" go build -o /cds-csi-driver ./cmd/
 
