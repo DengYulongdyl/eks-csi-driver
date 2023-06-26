@@ -1,10 +1,11 @@
-package pkg
+package utils
 
 import (
 	"encoding/json"
 	"fmt"
 	"github.com/container-storage-interface/spec/lib/go/csi"
 	"github.com/getsentry/sentry-go"
+	"golang.org/x/sys/unix"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"io/ioutil"
@@ -17,7 +18,6 @@ import (
 	"time"
 
 	log "github.com/sirupsen/logrus"
-	"golang.org/x/sys/unix"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

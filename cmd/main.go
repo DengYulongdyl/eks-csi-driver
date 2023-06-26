@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/capitalonline/eks-csi-driver/pkg/driver/disk"
+	"github.com/capitalonline/eks-csi-driver/pkg/utils"
 	"os"
 	"path"
 
