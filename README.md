@@ -47,7 +47,7 @@ kubectl create -f https://raw.githubusercontent.com/capitalonline/cds-csi-driver
 3. Run `make block-test`
 
 ## To use the NAS driver
-Examples can be found [here](!https://github.com/capitalonline/cds-csi-driver/tree/master/example/nas)
+Examples can be found [here](!https://github.com/capitalonline/eks-csi-driver/tree/master/example/nas)
 
 ### Static PV
 
@@ -151,7 +151,7 @@ Description:
 
 ## To use the OSS driver
 
-Examples can be found [here](!https://github.com/capitalonline/cds-csi-driver/tree/master/example/oss)
+Examples can be found [here](!https://github.com/capitalonline/eks-csi-driver/tree/master/example/oss)
 
 ### Static PV 
 

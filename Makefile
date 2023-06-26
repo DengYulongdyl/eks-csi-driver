@@ -1,4 +1,4 @@
-PKG=github.com/capitalonline/cds-csi-driver
+PKG=github.com/capitalonline/eks-csi-driver
 IMAGE?=registry-bj.capitalonline.net/cck/cds-csi-driver
 IMAGE_OVERSEA=capitalonline/cds-csi-driver
 VERSION=v2.0.4

@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/capitalonline/eks-cloud-controller-manager/pkg/utils/errors"
+	"github.com/capitalonline/eks-csi-driver/pkg/utils/errors"
 )
 
 type Response interface {

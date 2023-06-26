@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/capitalonline/eks-cloud-controller-manager/pkg/utils/errors"
+	"github.com/capitalonline/eks-csi-driver/pkg/utils/errors"
 
-	cdshttp "github.com/capitalonline/eks-cloud-controller-manager/pkg/utils/http"
-	"github.com/capitalonline/eks-cloud-controller-manager/pkg/utils/profile"
+	cdshttp "github.com/capitalonline/eks-csi-driver/pkg/utils/http"
+	"github.com/capitalonline/eks-csi-driver/pkg/utils/profile"
 )
 
 type Client struct {

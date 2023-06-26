@@ -3,11 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/capitalonline/cds-csi-driver/pkg/driver/disk"
+	"github.com/capitalonline/eks-csi-driver/pkg/driver/disk"
 	"os"
 	"path"
 
-	"github.com/capitalonline/cds-csi-driver/pkg/common"
+	"github.com/capitalonline/eks-csi-driver/pkg/common"
 	log "github.com/sirupsen/logrus"
 )
 

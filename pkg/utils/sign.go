@@ -10,7 +10,7 @@ import (
 	"sort"
 	"strings"
 
-	cdshttp "github.com/capitalonline/eks-cloud-controller-manager/pkg/utils/http"
+	cdshttp "github.com/capitalonline/eks-csi-driver/pkg/utils/http"
 )
 
 const (

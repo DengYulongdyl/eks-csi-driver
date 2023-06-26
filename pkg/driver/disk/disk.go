@@ -1,7 +1,7 @@
 package disk
 
 import (
-	"github.com/capitalonline/cds-csi-driver/pkg/common"
+	"github.com/capitalonline/eks-csi-driver/pkg/common"
 	"github.com/kubernetes-csi/drivers/pkg/csi-common"
 	log "github.com/sirupsen/logrus"
 )
