@@ -14,6 +14,8 @@ const (
 const (
 	ActionCreateBlock = "CreateBlock"
 	ActionDeleteBlock = "DeleteBlock"
+	ActionAttachBlock = "AttachBlock"
+	ActionDetachBlock = "DetachBlock"
 )
 
 const (

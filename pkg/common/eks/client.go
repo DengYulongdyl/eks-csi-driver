@@ -64,3 +64,49 @@ func (c *Client) DeleteBlock(request *DeleteBlockRequest) (response *DeleteBlock
 	err = c.Send(request, response)
 	return
 }
+
+func NewAttachBlockRequest() (request *AttachBlockRequest) {
+	request = &AttachBlockRequest{
+		BaseRequest: &cdshttp.BaseRequest{},
+	}
+	request.SetDomain(consts.ApiHost)
+	request.Init().WithApiInfo(consts.ServiceEKS, consts.ApiVersion, consts.ActionAttachBlock)
+	return
+}
+
+func NewAttachBlockResponse() (response *AttachBlockResponse) {
+	response = &AttachBlockResponse{BaseResponse: &cdshttp.BaseResponse{}}
+	return
+}
+
+func (c *Client) AttachBlock(request *AttachBlockRequest) (response *AttachBlockResponse, err error) {
+	if request == nil {
+		request = NewAttachBlockRequest()
+	}
+	response = NewAttachBlockResponse()
+	err = c.Send(request, response)
+	return
+}
+
+func NewDetachBlockRequest() (request *DetachBlockRequest) {
+	request = &DetachBlockRequest{
+		BaseRequest: &cdshttp.BaseRequest{},
+	}
+	request.SetDomain(consts.ApiHost)
+	request.Init().WithApiInfo(consts.ServiceEKS, consts.ApiVersion, consts.ActionDetachBlock)
+	return
+}
+
+func NewDetachBlockResponse() (response *DetachBlockResponse) {
+	response = &DetachBlockResponse{BaseResponse: &cdshttp.BaseResponse{}}
+	return
+}
+
+func (c *Client) DetachBlock(request *DetachBlockRequest) (response *DetachBlockResponse, err error) {
+	if request == nil {
+		request = NewDetachBlockRequest()
+	}
+	response = NewDetachBlockResponse()
+	err = c.Send(request, response)
+	return
+}
